@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.scss';
+import App from './App.jsx';
 
 const rootElement = document.querySelector('#root');
 
-const List = () => {
-  return <h1>Hello React</h1>;
-};
-
-ReactDOM.render(<List />, rootElement);
+ReactDOM.render(<App />, rootElement);
