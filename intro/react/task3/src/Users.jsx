@@ -3,8 +3,8 @@ import { Link, Switch, Route } from 'react-router-dom';
 import User from './User';
 
 const Users = (props) => {
-  console.log(props);
-  const path = props.match.url
+  // console.log(props);
+  const path = props.match.url;
   return (
     <div className="page__content">
       <h1>Users</h1>
@@ -17,10 +17,10 @@ const Users = (props) => {
         </li>
       </ul>
       <Switch>
-        <Route path="/users/:userId" component={User} />
-        <Route exact path={`${path}/:userId`}>
+        <Route exact path={`${path}`}>
           <span>Select user please</span>
         </Route>
+        <Route path={`${path}/:userId`} component={User} />
       </Switch>
     </div>
   );
